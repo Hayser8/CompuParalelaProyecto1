@@ -1,13 +1,3 @@
-// screensaver_seq.c
-// Screensaver secuencial en C con SDL2.
-// - Órbitas con estela y “respiración” de puntos.
-// - Mandala (simetrías radiales y espejo).
-// - Paletas: neon, ocean; look limpio por defecto.
-// - HiDPI + SSAA; FPS en título; logging CSV.
-// Compilar (macOS/Linux):
-//   gcc -O2 -std=c11 secuencial/src/screensaver_seq.c $(pkg-config --cflags --libs sdl2) -lm -o secuencial/bin/screensaver_seq
-// Ejecutar: ver `--help`. ESC para salir.
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
