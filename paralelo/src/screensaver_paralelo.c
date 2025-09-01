@@ -1,24 +1,3 @@
-/*
- * screensaver_paralelo.c
- *
- * Versión paralela (OpenMP opcional) del generador de mandalas con SDL2.
- * Se paraleliza la física y el pre-cálculo por partícula; el dibujo se realiza
- * en el hilo principal (SDL no es thread-safe). Mantiene dos paletas: "neon" y "ocean".
- *
- * Compilación (macOS + Homebrew libomp):
- *   clang -O3 -std=c11 paralelo/src/screensaver_paralelo.c \
- *     $(pkg-config --cflags sdl2) -Xpreprocessor -fopenmp \
- *     -I"$(brew --prefix libomp)/include" \
- *     -L"$(brew --prefix libomp)/lib" -lomp \
- *     $(pkg-config --libs sdl2) -lm \
- *     -Wl,-rpath,"$(brew --prefix libomp)/lib" \
- *     -o paralelo/bin/screensaver_par
- *
- * Ejemplo (FPS objetivo 30, registro CSV):
- *   ./paralelo/bin/screensaver_par --n 1500 --width 1512 --height 982 \
- *     --seconds 30 --seed 42 --palette neon --vsync 0 --ssaa 1 --threads 0 \
- *     --trail 0 --adapt 0 --log par_neon.csv --log-every-ms 200
- */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
