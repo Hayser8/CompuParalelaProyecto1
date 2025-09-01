@@ -1,3 +1,0 @@
-palette,seq_fps_mean,par_fps_mean,speedup_par_over_seq,seq_file,par_file
-neon,29.505449,94.802667,3.213056,seq_neon.csv,par_neon.csv
-ocean,27.908149,93.541687,3.351770,seq_ocean.csv,par_ocean.csv
